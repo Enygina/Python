@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0e665c49-e3f2-435b-bf29-022ee342060c" name="Changes" comment="add task decision">
-      <change afterPath="$PROJECT_DIR$/sem3task2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HomeWork/sem3task2.py" beforeDir="false" afterPath="$PROJECT_DIR$/HomeWork/sem3task2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sem3task1.py" beforeDir="false" afterPath="$PROJECT_DIR$/sem3task1.py" afterDir="false" />
-    </list>
+    <list default="true" id="0e665c49-e3f2-435b-bf29-022ee342060c" name="Changes" comment="add task decision" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -194,7 +189,21 @@
       <option name="project" value="LOCAL" />
       <updated>1669984864269</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="add task decision">
+      <created>1670064459230</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1670064459230</updated>
+    </task>
+    <task id="LOCAL-00006" summary="add task decision">
+      <created>1670064473801</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1670064473801</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
