@@ -15,13 +15,15 @@ with open('s4t5_Polynomial.txt', 'r') as file:  # открываем файл, �
     print(f'Второй многочлен: {lst_of_poly_2}')
 
 if len(lst_of_poly_1) > len(lst_of_poly_2):  # получаем список плюсов длинной меньшего многочлена
-    len_p = len(lst_of_poly_2)
+    len_min = len(lst_of_poly_2)
+    len_max = len(lst_of_poly_1)
 else:
-    len_p = len(lst_of_poly_1)
-lst_plus = [' + '] * (int(len_p))
+    len_min = len(lst_of_poly_1)
+    len_max = len(lst_of_poly_2)
+lst_plus = [' + '] * (int(len_min))
 
-poly_3 = [[l_1, l_p, l_2] for l_1, l_p, l_2 in itertools.zip_longest(   # соединяем списки многочленов и плюсов
-    lst_of_poly_1, lst_plus, lst_of_poly_2, fillvalue='') if l_2 or l_1 != 0]
+poly_3 = [[l_1, l_p, l_2, r] for l_1, l_p, l_2, r in itertools.zip_longest(   # соединяем списки многочленов и плюсов
+    lst_of_poly_1, lst_plus, lst_of_poly_2, range(len_min, 1, -1), fillvalue='') if l_2 or l_1 != 0]
 
 for x in poly_3:
     x.append(' + ')

@@ -4,7 +4,7 @@
 # Пример:
 # - Ввод:[1,1,2,4,5,6,7,7,8], результат: [2,4,5,6,8]
 
-lst = list(map(int, input("Введите числа через пробел:\n").split(',')))
+lst = list(map(int, input("Введите числа через запятую:\n").split(',')))
 new_lst = []
 dic = dict((i, lst.count(i)) for i in lst)
 for k, v in dic.items():
