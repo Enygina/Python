@@ -12,14 +12,17 @@ import math
 n = int(input('Выбери сколько конфет я у тебя выиграю '))
 max_step = int(input('Теперь выбери, сколько максимум можно забрать за один ход '))
 human = int(input('Рискни сделать первый ход: '))
-rem_div = n % (max_step + 1)
-ai = 0
+rem_div = n % (max_step + 1)             # математическая формула победы для первого хода
+ai = 0                                   # ход компьютера
+
 # проверка введенного числа
 if human > max_step or human < 1:
     human = int(input(f'Кто-то забыл правила игры...поробуй еще раз '))
 
 # первый шаг
 def first_step(human, max_step, n, rem_div):  # первый ход:
+    """"Для победы первые два хода должны быть равны rem_div,
+или, если пользователь ввел большее число, то rem_div+(max_step+1)"""
     if human in range(0, max_step + 1):
         if human > rem_div:
             ai = (rem_div + (max_step + 1)) - human
@@ -33,8 +36,8 @@ def first_step(human, max_step, n, rem_div):  # первый ход:
         print(f'Мой ход {ai}, осталось конфет:  {n} ')
     return n
 
-#
 def second_to_last_step(n):
+    """"Следующие шаги должны быть равны (max_step + 1) - ход игрока"""
     while n > max_step + 1:
         human = int(input('Твой ход: '))
         if human > max_step or human < 1:
@@ -46,6 +49,7 @@ def second_to_last_step(n):
 
 
 def last_step(n):
+    """"Вывод результата игры"""
     human = int(input('Твой ход: '))
     if human > max_step or human < 1:
         human = int(input(f'Кто-то забыл правила игры...поробуй еще раз'))
