@@ -1,30 +1,24 @@
 # Найдите корни квадратного уравнения Ax² + Bx + C = 0
 # a, b, c = int(input('Введите а')), int(input('Введите b')), int(input('Введите c'))
 
-str = '4 * x^2 - 4 * x + 1 = 0'
-nums = str.split()
-print(nums)
-nums1 = []
-for i in nums:
-    if i.isdigit() or i =='-':
-        nums1.append(i)
-    if i=="=":
-        break
-print(nums1)
-i=0
-while nums1.count('-') !=0:
-    if nums1[i] =='-':
-        nums1[i]+=nums1[i+1]
-        nums1.pop(i+1)
-        i=0
-    i+=1
-print(nums1)
-a,b,c=int(nums1[0]), int(nums1[1]),int(nums1[2])
-d = b ** 2 - 4 * a * c
-if d < 0:
-    print('-1')
-elif d == 0:
-    print(-b / (2 * a))
+
+import math
+
+print("Введите коэффициенты для уравнения")
+print("ax^2 + bx + c = 0:")
+a = float(input("a = "))
+b = float(input("b = "))
+c = float(input("c = "))
+
+discr = b ** 2 - 4 * a * c
+print("Дискриминант D = %.2f" % discr)
+
+if discr > 0:
+    x1 = (-b + math.sqrt(discr)) / (2 * a)
+    x2 = (-b - math.sqrt(discr)) / (2 * a)
+    print("x1 = %.2f \nx2 = %.2f" % (x1, x2))
+elif discr == 0:
+    x = -b / (2 * a)
+    print("x = %.2f" % x)
 else:
-    print(round((-b + (d ** 0.5)) / (2 * a)), 2)
-    print(round((-b - (d ** 0.5)) / (2 * a)), 2)
+    print("Корней нет")

@@ -10,14 +10,17 @@
 # - список: ["123", "234", 123, "567"], ищем: "123", ответ: -1
 # - список: [], ищем: "123", ответ: -1
 
-lst = ["123", "234", 123, "567"]
-fnd = '123'
-count = 0
-index = -1
-for i in range(0, len(lst)):
-    if lst[i] == fnd:
-        count += 1
-        if count == 2:
-            index=i
-            break
-print(index)
+lst = ["йцу", "фыв", "ячс", "цук", "йцукен", "йцу"]
+fnd = 'йцу'
+# count = 0
+# index = -1
+# for i in range(0, len(lst)):
+#     if lst[i] == fnd:
+#         count += 1
+#         if count == 2:
+#             index=i
+#             break
+# print(index)
+
+# def is_num(l, f):
+#     num =[i for i in l if (f) in i]
